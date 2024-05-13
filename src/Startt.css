@@ -1,0 +1,275 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    /*overflow: hidden; /* Hide scrollbars */
+    position: relative; /* Ensure overlay covers entire viewport */
+    transition: opacity 1s ease; /* Apply transition to the entire body */
+}
+
+#speechRecognitionBtn{
+    margin:30px;
+    border-radius:10px;
+    border:1px solid white;
+    padding:10px 50px;
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+    z-index: 1; /* Place overlay above video and below content */
+}
+
+.inputt {
+    
+    margin:20%;
+    position: relative;
+    display: inline-block;
+}
+#queryInput{
+    font-size:30px;
+    text-align:center;
+    width: 800px; /* Adjust width as needed */
+    height: auto;
+}
+.inputt input[type="text"] {
+    padding: 15px 50px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 20px; /* Adjust border-radius for roundness */
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Initial glow effect */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for the glow effect */
+    width: 300px; /* Adjust width as needed */
+    
+}
+
+
+.inputt input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Enhanced glow effect on focus */
+}
+
+.inputt::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: -1; /* Ensure the pseudo-element is behind the input */
+}
+
+.inputt::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    z-index: -2; /* Ensure the pseudo-element is behind the input and its background */
+}
+
+/* Add animation */
+.inputt input[type="text"] {
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Start with a subtle glow effect */
+    }
+    50%{
+        box-shadow: 0 0 20px rgba(222, 22, 2, 0.9);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(2, 222, 522, 0.9); /* End with a stronger glow effect */
+    }
+}
+
+
+.content {
+    position: relative;
+    text-align: center;
+    color: #d2d2d2;
+    opacity: 100;
+    transition: opacity 1s ease; /* Add transition for opacity */
+}
+
+
+.fade-in {
+    opacity: 1;
+}
+
+/* h1 {
+    margin-top: 10px; 
+    margin-bottom: 0px; 
+    text-align: center;
+    color: #fff;
+    font-size: 55px;
+} */
+.container {
+    margin: auto;
+    margin-top:-20%;
+}
+
+.input-container {
+    text-align: center;
+    margin-top: -19%; 
+    border-radius:100%;
+    opacity:0.5;
+    /* background-color:#ffff00;
+    border:1px solid white; */
+}
+
+
+.input-container input[type="text"],
+.input-container button {
+    padding: 15px 40px;
+    font-size: 30px;
+    border-radius: 50px;
+    background-color: #f3f3f3;
+    color: #0458ad;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in, transform 0.3s ease;
+}
+/* Startt.css */
+/* Add loading animation */
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Add loading class to button */
+  #submitBtn{
+    padding: 10px 100px;
+    border:1px solid white;
+    border-radius:10px;
+  }
+  
+.input-container input[type="text"] {
+    width: 300px;
+    margin-right: 20px;
+}
+
+.input-container button:hover {
+    background-color: #0458ad;
+    color: white;
+    border-radius: 50px;
+}
+
+.or-divider {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 25px;
+}
+
+.or-divider::before,
+.or-divider::after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    border-top: 2px solid #000;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+
+.or-divider::before {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.or-divider::after {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+/* Style the semi-transparent black overlay */
+.chartt{
+   margin-top:-40%;
+    opacity:1;
+}
+#myChart {
+    padding:10%;
+   /* width: 1000px;/* Set the desired width */
+    height: auto; 
+}
+
+#firstemotionText{
+    font-family: serif;
+  font-size: 50px;
+  color: #f0f;
+  text-align: center;
+  
+}
+
+#emotionText {
+    font-size: 30px; /* Adjust the font size as needed */
+}
+
+.button {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 70px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Ensure the image stays within the button */
+}
+
+.button img {
+    width: 200px;
+    height: auto;
+    display: block; /* Prevent extra space below the image */
+}
+
+.button:hover {
+    transform: scale(1.1); /* Grow the button on hover */
+}
+
+/* .button:hover::after {
+    /* content: attr(title); Display the title on hover */
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 16px;
+} */ 
+.textt{
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+    padding:5px;
+}
+.textt:hover {
+    text-transform: uppercase;
+    color: yellow;
+}
+//dr zen button css
+.butzen {
+    background-color: transparent;
+    border: 2px solid #f11; /* Add border for a visible button */
+    color: #ffff; /* Text color */
+    padding: 10px 30px; /* Adjust padding as needed */
+    font-size: 22px; /* Adjust font size as needed */
+    cursor: pointer;
+    border-radius:20px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.button-drzen:hover {
+    background-color: rgba(11, 588, 999, 0.6); /* Change background color on hover */
+}

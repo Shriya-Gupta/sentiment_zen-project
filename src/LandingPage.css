@@ -1,0 +1,108 @@
+.cover-container {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; 
+    opacity: 100;
+    transition: opacity 1s ease; /* Add transition for opacity */
+  }
+  
+  .fade-in {
+    opacity: 1;
+  }
+  .headclass {
+    font-family: 'Roboto',serif;
+    margin-top: 10%;
+    text-align: center;
+    /* padding-bottom: 10px; */
+    font-size: 100px;
+    color: #fff;
+    animation: fadeAnimation 2s ease-in-out infinite alternate; /* Apply the animation */
+  }
+  
+  @keyframes fadeAnimation {
+    0% {
+      opacity: 1; /* Start with full opacity */
+    }
+    100% {
+      opacity: 0.5; /* End with half opacity */
+    }
+  }
+  
+  .cover-title {
+    padding-top:30%;
+    font-family:"Silkscreen",sans-serif;
+    font-size: 50px;
+    color: #6b6a6a; /* Set text color to match the video background */
+  }
+  
+  
+  .cover-subtitle {
+    margin:100px;
+    font-family:"Silkscreen",sans-serif;
+    font-size: 20px;
+    color: #fff; /* Set text color to match the video background */
+
+  }
+  
+  .start-button, .dr-zen-button {
+    background:rgba(0,0,0,0.4);
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 30px;
+  color:#fff;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 5px;
+  transition: all 0.3s ease; /* Add transition for background-color and transform */
+  }
+  
+  .start-button, .dr-zen-button span {
+    margin: 15px;
+  }
+  
+  .start-button:hover {
+    background-color: #0458ad;
+    transform: scale(1.1); /* Scale the button on hover */
+  }
+  .dr-zen-button:hover {
+    background-color: #0458ad;
+    transform: scale(1.1); /* Scale the button on hover */
+  }
+  
+  /* Fade-out animation */
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Add transition for opacity */
+  }
+  .senthead {
+    font-family: 'Roboto', serif;
+    text-align: center;
+    /* padding-bottom: 10px; */
+    font-size: 100px;
+    color: #fff;
+    animation: fadeAnimation 2s ease-in-out infinite alternate;
+  }
+  /* Media Query for Small Devices (Mobile Phones) */
+@media only screen and (max-width: 600px) {
+  .senthead {
+      font-size: 50px;
+  }
+}
+
+/* Media Query for Medium Devices (Tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .senthead {
+      font-size: 80px;
+  }
+}
+
+/* Media Query for Large Devices (Desktops) */
+@media only screen and (min-width: 1025px) {
+  .senthead {
+      margin-top: 5%; /* Adjusted for larger screens */
+  }
+}
+  

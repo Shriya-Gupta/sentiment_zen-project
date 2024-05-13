@@ -1,0 +1,29 @@
+.headclass {
+  font-family: 'Roboto', serif;
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 100px;
+  color: #fff;
+  animation: fadeAnimation 2s ease-in-out infinite alternate;
+}
+
+/* Media Query for Small Devices (Mobile Phones) */
+@media only screen and (max-width: 600px) {
+  .headclass {
+      font-size: 50px;
+  }
+}
+
+/* Media Query for Medium Devices (Tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .headclass {
+      font-size: 80px;
+  }
+}
+
+/* Media Query for Large Devices (Desktops) */
+@media only screen and (min-width: 1025px) {
+  .headclass {
+      margin-top: 5%; /* Adjusted for larger screens */
+  }
+}

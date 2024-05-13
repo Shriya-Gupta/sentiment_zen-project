@@ -1,0 +1,96 @@
+.zen-chat-container {
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    width: 500px;
+    border: 1px solid #ccc;
+    background-color: rgba(0,0,0,0.5);
+    border-radius:30px;
+    box-shadow: 0 2px 5px rgba(111, 0, 0, 0.9);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    z-index: 9999;
+    animation: slideInOutAnimation 0.5s ease forwards; /* Apply the slide-down animation */
+}
+@keyframes slideInOutAnimation {
+  from {
+      transform: translateX(100%); /* Start with the container off-screen to the right */
+  }
+  to {
+      transform: translateX(0); /* Slide the container into view */
+  }
+}
+
+.zen-chat-container.visible {
+    transform: translateX(-300px); /* Slide in from the right */
+}
+
+.zen-chat-content {
+    display: none;
+}
+
+.zen-chat-container.visible .zen-chat-content {
+    display: block;
+}
+.zen-input-container {
+  margin-bottom: 10px;
+  padding-top:15px;
+}
+
+.zen-toggler {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.zen-toggler:hover {
+    background-color: #0056b3;
+}
+
+.zen-response-container {
+    margin-top:10px;
+    padding: 10px;
+    margin-left:10px;
+    border-bottom: 1px solid #ccc;
+    color: #fff; /* Set font color to white */
+    width:440px;
+    font-size:20px;
+    background-color: #4CAF50; /* Set background color to a green shade */
+    border-radius: 30px; /* Add rounded corners */
+    padding: 20px; /* Add some padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Add a subtle shadow */
+    font-family: Arial, sans-serif; /* Use a fallback font */
+}
+
+.zen-input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.zen-input-container input[type="text"] {
+    flex: 1;
+    margin-top:10px;
+    padding: 10px;
+    border: 1px solid #f00f;
+    border-radius: 20px;
+    font-size:20px;
+    margin-right: 10px;
+}
+
+.zen-button {
+    background-color: #007bff;
+    color: #fff;
+    border: red;
+    margin-bottom:-6px;
+    padding: 10px 20px;
+    border-radius: 22px;
+    font-size:20px;
+    cursor: pointer;
+}
+
+.zen-button:hover {
+    background-color: #0056b3;
+}

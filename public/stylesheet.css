@@ -1,0 +1,42 @@
+.firefly {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: #fdd835;
+    border-radius: 50%;
+    opacity: 1;
+    pointer-events: none;
+    z-index:1;
+    animation: flicker 1s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    height:0px;
+    
+    /* Width of the scrollbar */
+  }
+
+  /* Handle (thumb) of the scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background-color: #413d3d;
+    /* Color of the thumb */
+    border-radius: 4px;
+    /* Rounded corners */
+  }
+
+  /* Track (background) of the scrollbar */
+  ::-webkit-scrollbar-track {
+    background-color: #0e0d0d;
+    /* Color of the track */
+  }
